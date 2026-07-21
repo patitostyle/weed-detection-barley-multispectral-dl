@@ -12,7 +12,7 @@ The system was built and validated end to end: UAV image acquisition, GIS prepro
 
 ## Study Area & Data
 
-- **Location:** Alcalá de Henares, Community of Madrid, Spain
+- **Location:** Valdeavero, Community of Madrid, Spain
 - **Fields:** Barley 1 (11.83 ha), Barley 2 (15.93 ha), Oilseed rape (8.39 ha)
 - **Flights:** V1 (3 March) — early growth stage; V2 (14 May) — heading/flowering stage
 - **Sensors:** DJI Phantom 4 RTK (RGB, 20 MP) + DJI Matrice 600 Pro with MicaSense Altum-PT (Red, Green, Blue, NIR, RedEdge)
