@@ -51,3 +51,32 @@ The system was built and validated end to end: UAV image acquisition, GIS prepro
 - Final probability and density maps demonstrate practical potential for site-specific weed management.
 
 ## Repository Structure
+
+weed-detection-barley-multispectral-dl/
+│
+├── README.md
+├── LICENSE
+│
+├── 01_gis_processing/ # Orthomosaic clipping (aligned path/row) + vegetation index calculation
+├── 02_patch_generation/ # Python scripts to generate 256x256 patches from images + masks
+├── 03_deep_learning_models/ # U-Net, DeepLabv3, Random Forest — training & evaluation
+├── 04_hybrid_approach/ # Rule-based post-processing on top of the baseline U-Net
+├── 05_metaheuristic_optimization/ # PSO hyperparameter search
+└── 06_inference_and_density_maps/ # Full-field inference + 2x2m probability/density/infestation maps
+
+## Tech Stack
+
+- **Python:** data processing, patch generation, model training
+- **Deep Learning:** U-Net, DeepLabv3 (custom implementations)
+- **GIS:** ArcGIS Pro (clipping, band alignment, vegetation indices, manual labelling)
+- **Photogrammetry:** Pix4D, Agisoft Metashape (orthomosaic generation)
+
+## Citation
+
+If you use this work, please cite the associated Master's Thesis (UPM, 2026) and/or the derived article draft.
+
+## Contact
+
+Patricio Hernández — patricio.hernandez@alumnos.upm.es
+
+## Repository Structure
