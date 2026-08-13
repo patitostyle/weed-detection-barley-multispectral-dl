@@ -29,7 +29,7 @@ The system was built and validated end to end: UAV image acquisition, GIS prepro
 8. **Hyperparameter optimization:** Particle Swarm Optimisation (PSO) on the best-performing model
 9. **Spatial validation** on an independent barley field (Barley 2)
 10. **Cross-crop transfer test** on oilseed rape (no retraining)
-11. **Weed probability & density map generation** via sliding-window spatial inference
+11. **Weed probability & density map generation:** full-field sliding-window inference, aggregated into 2×2 m cells as continuous probability, binary weed-pixel density, and a 4-level infestation classification (very low / low / medium / high)
 
 ## Key Results
 
@@ -51,35 +51,3 @@ The system was built and validated end to end: UAV image acquisition, GIS prepro
 - Final probability and density maps demonstrate practical potential for site-specific weed management.
 
 ## Repository Structure
-
-```
-weed-detection-barley-multispectral-dl/
-│
-├── README.md
-├── LICENSE
-├── requirements.txt
-│
-├── 01_gis_processing/          # Orthomosaic clipping (aligned path/row) + vegetation index calculation
-├── 02_patch_generation/        # Python scripts to generate 256x256 patches from images + masks
-├── 03_deep_learning_models/    # U-Net, DeepLabv3, Random Forest — training & evaluation
-├── 04_metaheuristic_optimization/  # PSO hyperparameter optimisation
-├── results/                    # Figures, metrics, probability/density maps
-└── docs/
-    ├── thesis_summary.md
-    └── article_draft.md
-```
-
-## Tech Stack
-
-- **Python:** data processing, patch generation, model training
-- **Deep Learning:** U-Net, DeepLabv3 (custom implementations)
-- **GIS:** ArcGIS Pro (clipping, band alignment, vegetation indices, manual labelling)
-- **Photogrammetry:** Pix4D, Agisoft Metashape (orthomosaic generation)
-
-## Citation
-
-If you use this work, please cite the associated Master's Thesis (UPM, 2026) and/or the derived article draft.
-
-## Contact
-
-Patricio Hernández — patricio.hernandez@alumnos.upm.es
